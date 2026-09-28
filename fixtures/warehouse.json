@@ -1,0 +1,4452 @@
+{
+  "assets": [
+    {
+      "id": "commerce",
+      "kind": "dataset",
+      "name": "commerce",
+      "data_type": "schema",
+      "description": "Commerce warehouse domain",
+      "domain": "commerce",
+      "owners": [
+        "commerce-platform"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.customers",
+      "kind": "table",
+      "name": "customers",
+      "data_type": "table",
+      "description": "Customer profiles contact details and account registration",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.customers.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for customers",
+      "domain": "commerce",
+      "parent_id": "commerce.customers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.customers.email",
+      "kind": "column",
+      "name": "email",
+      "data_type": "text",
+      "description": "email for customers",
+      "domain": "commerce",
+      "parent_id": "commerce.customers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.customers.region",
+      "kind": "column",
+      "name": "region",
+      "data_type": "text",
+      "description": "region for customers",
+      "domain": "commerce",
+      "parent_id": "commerce.customers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.customers.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for customers",
+      "domain": "commerce",
+      "parent_id": "commerce.customers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.customers.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for customers",
+      "domain": "commerce",
+      "parent_id": "commerce.customers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.orders",
+      "kind": "table",
+      "name": "orders",
+      "data_type": "table",
+      "description": "Customer purchases order status checkout and gross merchandise value",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.orders.order_id",
+      "kind": "column",
+      "name": "order_id",
+      "data_type": "text",
+      "description": "order id for orders",
+      "domain": "commerce",
+      "parent_id": "commerce.orders",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.orders.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for orders",
+      "domain": "commerce",
+      "parent_id": "commerce.orders",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.orders.total_amount",
+      "kind": "column",
+      "name": "total_amount",
+      "data_type": "numeric",
+      "description": "total amount for orders",
+      "domain": "commerce",
+      "parent_id": "commerce.orders",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.orders.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for orders",
+      "domain": "commerce",
+      "parent_id": "commerce.orders",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.orders.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for orders",
+      "domain": "commerce",
+      "parent_id": "commerce.orders",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.order_items",
+      "kind": "table",
+      "name": "order_items",
+      "data_type": "table",
+      "description": "Individual purchased products quantity and unit price",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.order_items.order_id",
+      "kind": "column",
+      "name": "order_id",
+      "data_type": "text",
+      "description": "order id for order items",
+      "domain": "commerce",
+      "parent_id": "commerce.order_items",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.order_items.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for order items",
+      "domain": "commerce",
+      "parent_id": "commerce.order_items",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.order_items.quantity",
+      "kind": "column",
+      "name": "quantity",
+      "data_type": "numeric",
+      "description": "quantity for order items",
+      "domain": "commerce",
+      "parent_id": "commerce.order_items",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.order_items.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for order items",
+      "domain": "commerce",
+      "parent_id": "commerce.order_items",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.order_items.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for order items",
+      "domain": "commerce",
+      "parent_id": "commerce.order_items",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.products",
+      "kind": "table",
+      "name": "products",
+      "data_type": "table",
+      "description": "Product catalog names categories and list prices",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.products.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for products",
+      "domain": "commerce",
+      "parent_id": "commerce.products",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.products.category_id",
+      "kind": "column",
+      "name": "category_id",
+      "data_type": "text",
+      "description": "category id for products",
+      "domain": "commerce",
+      "parent_id": "commerce.products",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.products.list_price",
+      "kind": "column",
+      "name": "list_price",
+      "data_type": "numeric",
+      "description": "list price for products",
+      "domain": "commerce",
+      "parent_id": "commerce.products",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.products.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for products",
+      "domain": "commerce",
+      "parent_id": "commerce.products",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.products.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for products",
+      "domain": "commerce",
+      "parent_id": "commerce.products",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.categories",
+      "kind": "table",
+      "name": "categories",
+      "data_type": "table",
+      "description": "Merchandise category hierarchy taxonomy",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.categories.category_id",
+      "kind": "column",
+      "name": "category_id",
+      "data_type": "text",
+      "description": "category id for categories",
+      "domain": "commerce",
+      "parent_id": "commerce.categories",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.categories.parent_category_id",
+      "kind": "column",
+      "name": "parent_category_id",
+      "data_type": "text",
+      "description": "parent category id for categories",
+      "domain": "commerce",
+      "parent_id": "commerce.categories",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.categories.label",
+      "kind": "column",
+      "name": "label",
+      "data_type": "text",
+      "description": "label for categories",
+      "domain": "commerce",
+      "parent_id": "commerce.categories",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.categories.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for categories",
+      "domain": "commerce",
+      "parent_id": "commerce.categories",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.categories.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for categories",
+      "domain": "commerce",
+      "parent_id": "commerce.categories",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.carts",
+      "kind": "table",
+      "name": "carts",
+      "data_type": "table",
+      "description": "Shopping cart abandonment before checkout",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.carts.cart_id",
+      "kind": "column",
+      "name": "cart_id",
+      "data_type": "text",
+      "description": "cart id for carts",
+      "domain": "commerce",
+      "parent_id": "commerce.carts",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.carts.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for carts",
+      "domain": "commerce",
+      "parent_id": "commerce.carts",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.carts.abandoned_at",
+      "kind": "column",
+      "name": "abandoned_at",
+      "data_type": "timestamptz",
+      "description": "abandoned at for carts",
+      "domain": "commerce",
+      "parent_id": "commerce.carts",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.carts.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for carts",
+      "domain": "commerce",
+      "parent_id": "commerce.carts",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.carts.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for carts",
+      "domain": "commerce",
+      "parent_id": "commerce.carts",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.shipments",
+      "kind": "table",
+      "name": "shipments",
+      "data_type": "table",
+      "description": "Order delivery tracking carriers shipping dispatch",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.shipments.shipment_id",
+      "kind": "column",
+      "name": "shipment_id",
+      "data_type": "text",
+      "description": "shipment id for shipments",
+      "domain": "commerce",
+      "parent_id": "commerce.shipments",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.shipments.order_id",
+      "kind": "column",
+      "name": "order_id",
+      "data_type": "text",
+      "description": "order id for shipments",
+      "domain": "commerce",
+      "parent_id": "commerce.shipments",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.shipments.tracking_number",
+      "kind": "column",
+      "name": "tracking_number",
+      "data_type": "text",
+      "description": "tracking number for shipments",
+      "domain": "commerce",
+      "parent_id": "commerce.shipments",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.shipments.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for shipments",
+      "domain": "commerce",
+      "parent_id": "commerce.shipments",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.shipments.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for shipments",
+      "domain": "commerce",
+      "parent_id": "commerce.shipments",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.returns",
+      "kind": "table",
+      "name": "returns",
+      "data_type": "table",
+      "description": "Returned merchandise reasons reverse logistics",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.returns.return_id",
+      "kind": "column",
+      "name": "return_id",
+      "data_type": "text",
+      "description": "return id for returns",
+      "domain": "commerce",
+      "parent_id": "commerce.returns",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.returns.order_id",
+      "kind": "column",
+      "name": "order_id",
+      "data_type": "text",
+      "description": "order id for returns",
+      "domain": "commerce",
+      "parent_id": "commerce.returns",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.returns.reason",
+      "kind": "column",
+      "name": "reason",
+      "data_type": "text",
+      "description": "reason for returns",
+      "domain": "commerce",
+      "parent_id": "commerce.returns",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.returns.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for returns",
+      "domain": "commerce",
+      "parent_id": "commerce.returns",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.returns.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for returns",
+      "domain": "commerce",
+      "parent_id": "commerce.returns",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.inventory",
+      "kind": "table",
+      "name": "inventory",
+      "data_type": "table",
+      "description": "Warehouse stock availability replenishment quantities",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.inventory.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for inventory",
+      "domain": "commerce",
+      "parent_id": "commerce.inventory",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.inventory.warehouse_id",
+      "kind": "column",
+      "name": "warehouse_id",
+      "data_type": "text",
+      "description": "warehouse id for inventory",
+      "domain": "commerce",
+      "parent_id": "commerce.inventory",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.inventory.stock_quantity",
+      "kind": "column",
+      "name": "stock_quantity",
+      "data_type": "numeric",
+      "description": "stock quantity for inventory",
+      "domain": "commerce",
+      "parent_id": "commerce.inventory",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.inventory.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for inventory",
+      "domain": "commerce",
+      "parent_id": "commerce.inventory",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.inventory.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for inventory",
+      "domain": "commerce",
+      "parent_id": "commerce.inventory",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.suppliers",
+      "kind": "table",
+      "name": "suppliers",
+      "data_type": "table",
+      "description": "Vendor procurement contacts and supplier contracts",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.suppliers.supplier_id",
+      "kind": "column",
+      "name": "supplier_id",
+      "data_type": "text",
+      "description": "supplier id for suppliers",
+      "domain": "commerce",
+      "parent_id": "commerce.suppliers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.suppliers.company_name",
+      "kind": "column",
+      "name": "company_name",
+      "data_type": "text",
+      "description": "company name for suppliers",
+      "domain": "commerce",
+      "parent_id": "commerce.suppliers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.suppliers.contact_email",
+      "kind": "column",
+      "name": "contact_email",
+      "data_type": "text",
+      "description": "contact email for suppliers",
+      "domain": "commerce",
+      "parent_id": "commerce.suppliers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.suppliers.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for suppliers",
+      "domain": "commerce",
+      "parent_id": "commerce.suppliers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.suppliers.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for suppliers",
+      "domain": "commerce",
+      "parent_id": "commerce.suppliers",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.promotions",
+      "kind": "table",
+      "name": "promotions",
+      "data_type": "table",
+      "description": "Discount campaigns coupon codes promotional offers",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.promotions.promotion_id",
+      "kind": "column",
+      "name": "promotion_id",
+      "data_type": "text",
+      "description": "promotion id for promotions",
+      "domain": "commerce",
+      "parent_id": "commerce.promotions",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.promotions.coupon_code",
+      "kind": "column",
+      "name": "coupon_code",
+      "data_type": "text",
+      "description": "coupon code for promotions",
+      "domain": "commerce",
+      "parent_id": "commerce.promotions",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.promotions.discount_amount",
+      "kind": "column",
+      "name": "discount_amount",
+      "data_type": "numeric",
+      "description": "discount amount for promotions",
+      "domain": "commerce",
+      "parent_id": "commerce.promotions",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.promotions.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for promotions",
+      "domain": "commerce",
+      "parent_id": "commerce.promotions",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.promotions.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for promotions",
+      "domain": "commerce",
+      "parent_id": "commerce.promotions",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.reviews",
+      "kind": "table",
+      "name": "reviews",
+      "data_type": "table",
+      "description": "Product star ratings customer feedback reviews",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.reviews.review_id",
+      "kind": "column",
+      "name": "review_id",
+      "data_type": "text",
+      "description": "review id for reviews",
+      "domain": "commerce",
+      "parent_id": "commerce.reviews",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.reviews.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for reviews",
+      "domain": "commerce",
+      "parent_id": "commerce.reviews",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.reviews.rating",
+      "kind": "column",
+      "name": "rating",
+      "data_type": "text",
+      "description": "rating for reviews",
+      "domain": "commerce",
+      "parent_id": "commerce.reviews",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.reviews.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for reviews",
+      "domain": "commerce",
+      "parent_id": "commerce.reviews",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.reviews.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for reviews",
+      "domain": "commerce",
+      "parent_id": "commerce.reviews",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.wishlists",
+      "kind": "table",
+      "name": "wishlists",
+      "data_type": "table",
+      "description": "Saved favorite products shopping intent",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.wishlists.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for wishlists",
+      "domain": "commerce",
+      "parent_id": "commerce.wishlists",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.wishlists.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for wishlists",
+      "domain": "commerce",
+      "parent_id": "commerce.wishlists",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.wishlists.saved_at",
+      "kind": "column",
+      "name": "saved_at",
+      "data_type": "timestamptz",
+      "description": "saved at for wishlists",
+      "domain": "commerce",
+      "parent_id": "commerce.wishlists",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.wishlists.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for wishlists",
+      "domain": "commerce",
+      "parent_id": "commerce.wishlists",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.wishlists.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for wishlists",
+      "domain": "commerce",
+      "parent_id": "commerce.wishlists",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.loyalty",
+      "kind": "table",
+      "name": "loyalty",
+      "data_type": "table",
+      "description": "Reward points membership tiers customer loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.loyalty.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce.loyalty",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.loyalty.points",
+      "kind": "column",
+      "name": "points",
+      "data_type": "numeric",
+      "description": "points for loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce.loyalty",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.loyalty.tier",
+      "kind": "column",
+      "name": "tier",
+      "data_type": "text",
+      "description": "tier for loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce.loyalty",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.loyalty.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce.loyalty",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.loyalty.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for loyalty",
+      "domain": "commerce",
+      "parent_id": "commerce.loyalty",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales",
+      "kind": "table",
+      "name": "daily_sales",
+      "data_type": "table",
+      "description": "Daily aggregated sales revenue merchandise performance",
+      "domain": "commerce",
+      "parent_id": "commerce",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales.sale_date",
+      "kind": "column",
+      "name": "sale_date",
+      "data_type": "text",
+      "description": "sale date for daily sales",
+      "domain": "commerce",
+      "parent_id": "commerce.daily_sales",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for daily sales",
+      "domain": "commerce",
+      "parent_id": "commerce.daily_sales",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales.revenue",
+      "kind": "column",
+      "name": "revenue",
+      "data_type": "text",
+      "description": "revenue for daily sales",
+      "domain": "commerce",
+      "parent_id": "commerce.daily_sales",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for daily sales",
+      "domain": "commerce",
+      "parent_id": "commerce.daily_sales",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "commerce.daily_sales.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for daily sales",
+      "domain": "commerce",
+      "parent_id": "commerce.daily_sales",
+      "owners": [
+        "commerce-analytics"
+      ],
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "finance",
+      "kind": "dataset",
+      "name": "finance",
+      "data_type": "schema",
+      "description": "Finance warehouse domain",
+      "domain": "finance",
+      "owners": [
+        "finance-platform"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payments",
+      "kind": "table",
+      "name": "payments",
+      "data_type": "table",
+      "description": "Payment transactions settlement card transfer status",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.payments.payment_id",
+      "kind": "column",
+      "name": "payment_id",
+      "data_type": "text",
+      "description": "payment id for payments",
+      "domain": "finance",
+      "parent_id": "finance.payments",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payments.order_id",
+      "kind": "column",
+      "name": "order_id",
+      "data_type": "text",
+      "description": "order id for payments",
+      "domain": "finance",
+      "parent_id": "finance.payments",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payments.amount",
+      "kind": "column",
+      "name": "amount",
+      "data_type": "numeric",
+      "description": "amount for payments",
+      "domain": "finance",
+      "parent_id": "finance.payments",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payments.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for payments",
+      "domain": "finance",
+      "parent_id": "finance.payments",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payments.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for payments",
+      "domain": "finance",
+      "parent_id": "finance.payments",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.refunds",
+      "kind": "table",
+      "name": "refunds",
+      "data_type": "table",
+      "description": "Money refunded to buyers payment reversals",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.refunds.refund_id",
+      "kind": "column",
+      "name": "refund_id",
+      "data_type": "text",
+      "description": "refund id for refunds",
+      "domain": "finance",
+      "parent_id": "finance.refunds",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.refunds.payment_id",
+      "kind": "column",
+      "name": "payment_id",
+      "data_type": "text",
+      "description": "payment id for refunds",
+      "domain": "finance",
+      "parent_id": "finance.refunds",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.refunds.amount",
+      "kind": "column",
+      "name": "amount",
+      "data_type": "numeric",
+      "description": "amount for refunds",
+      "domain": "finance",
+      "parent_id": "finance.refunds",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.refunds.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for refunds",
+      "domain": "finance",
+      "parent_id": "finance.refunds",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.refunds.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for refunds",
+      "domain": "finance",
+      "parent_id": "finance.refunds",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoices",
+      "kind": "table",
+      "name": "invoices",
+      "data_type": "table",
+      "description": "Customer billing invoices due dates receivables",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.invoices.invoice_id",
+      "kind": "column",
+      "name": "invoice_id",
+      "data_type": "text",
+      "description": "invoice id for invoices",
+      "domain": "finance",
+      "parent_id": "finance.invoices",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoices.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for invoices",
+      "domain": "finance",
+      "parent_id": "finance.invoices",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoices.due_date",
+      "kind": "column",
+      "name": "due_date",
+      "data_type": "text",
+      "description": "due date for invoices",
+      "domain": "finance",
+      "parent_id": "finance.invoices",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoices.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for invoices",
+      "domain": "finance",
+      "parent_id": "finance.invoices",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoices.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for invoices",
+      "domain": "finance",
+      "parent_id": "finance.invoices",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines",
+      "kind": "table",
+      "name": "invoice_lines",
+      "data_type": "table",
+      "description": "Invoice line charges billed units",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines.invoice_id",
+      "kind": "column",
+      "name": "invoice_id",
+      "data_type": "text",
+      "description": "invoice id for invoice lines",
+      "domain": "finance",
+      "parent_id": "finance.invoice_lines",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines.product_id",
+      "kind": "column",
+      "name": "product_id",
+      "data_type": "text",
+      "description": "product id for invoice lines",
+      "domain": "finance",
+      "parent_id": "finance.invoice_lines",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines.amount",
+      "kind": "column",
+      "name": "amount",
+      "data_type": "numeric",
+      "description": "amount for invoice lines",
+      "domain": "finance",
+      "parent_id": "finance.invoice_lines",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for invoice lines",
+      "domain": "finance",
+      "parent_id": "finance.invoice_lines",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.invoice_lines.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for invoice lines",
+      "domain": "finance",
+      "parent_id": "finance.invoice_lines",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.subscriptions",
+      "kind": "table",
+      "name": "subscriptions",
+      "data_type": "table",
+      "description": "Recurring plans monthly recurring revenue MRR",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.subscriptions.subscription_id",
+      "kind": "column",
+      "name": "subscription_id",
+      "data_type": "text",
+      "description": "subscription id for subscriptions",
+      "domain": "finance",
+      "parent_id": "finance.subscriptions",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.subscriptions.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for subscriptions",
+      "domain": "finance",
+      "parent_id": "finance.subscriptions",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.subscriptions.monthly_amount",
+      "kind": "column",
+      "name": "monthly_amount",
+      "data_type": "numeric",
+      "description": "monthly amount for subscriptions",
+      "domain": "finance",
+      "parent_id": "finance.subscriptions",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.subscriptions.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for subscriptions",
+      "domain": "finance",
+      "parent_id": "finance.subscriptions",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.subscriptions.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for subscriptions",
+      "domain": "finance",
+      "parent_id": "finance.subscriptions",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries",
+      "kind": "table",
+      "name": "ledger_entries",
+      "data_type": "table",
+      "description": "Double entry accounting general ledger postings",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries.entry_id",
+      "kind": "column",
+      "name": "entry_id",
+      "data_type": "text",
+      "description": "entry id for ledger entries",
+      "domain": "finance",
+      "parent_id": "finance.ledger_entries",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries.account_id",
+      "kind": "column",
+      "name": "account_id",
+      "data_type": "numeric",
+      "description": "account id for ledger entries",
+      "domain": "finance",
+      "parent_id": "finance.ledger_entries",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries.debit_amount",
+      "kind": "column",
+      "name": "debit_amount",
+      "data_type": "numeric",
+      "description": "debit amount for ledger entries",
+      "domain": "finance",
+      "parent_id": "finance.ledger_entries",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for ledger entries",
+      "domain": "finance",
+      "parent_id": "finance.ledger_entries",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.ledger_entries.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for ledger entries",
+      "domain": "finance",
+      "parent_id": "finance.ledger_entries",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.accounts",
+      "kind": "table",
+      "name": "accounts",
+      "data_type": "table",
+      "description": "Chart of accounts accounting classification",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.accounts.account_id",
+      "kind": "column",
+      "name": "account_id",
+      "data_type": "numeric",
+      "description": "account id for accounts",
+      "domain": "finance",
+      "parent_id": "finance.accounts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.accounts.account_name",
+      "kind": "column",
+      "name": "account_name",
+      "data_type": "numeric",
+      "description": "account name for accounts",
+      "domain": "finance",
+      "parent_id": "finance.accounts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.accounts.account_type",
+      "kind": "column",
+      "name": "account_type",
+      "data_type": "numeric",
+      "description": "account type for accounts",
+      "domain": "finance",
+      "parent_id": "finance.accounts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.accounts.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for accounts",
+      "domain": "finance",
+      "parent_id": "finance.accounts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.accounts.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for accounts",
+      "domain": "finance",
+      "parent_id": "finance.accounts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates",
+      "kind": "table",
+      "name": "exchange_rates",
+      "data_type": "table",
+      "description": "Currency foreign exchange conversion daily FX rates",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates.currency",
+      "kind": "column",
+      "name": "currency",
+      "data_type": "text",
+      "description": "currency for exchange rates",
+      "domain": "finance",
+      "parent_id": "finance.exchange_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates.rate_date",
+      "kind": "column",
+      "name": "rate_date",
+      "data_type": "numeric",
+      "description": "rate date for exchange rates",
+      "domain": "finance",
+      "parent_id": "finance.exchange_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates.exchange_rate",
+      "kind": "column",
+      "name": "exchange_rate",
+      "data_type": "numeric",
+      "description": "exchange rate for exchange rates",
+      "domain": "finance",
+      "parent_id": "finance.exchange_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for exchange rates",
+      "domain": "finance",
+      "parent_id": "finance.exchange_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.exchange_rates.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for exchange rates",
+      "domain": "finance",
+      "parent_id": "finance.exchange_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.tax_rates",
+      "kind": "table",
+      "name": "tax_rates",
+      "data_type": "table",
+      "description": "Regional taxation VAT sales tax percentages",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.tax_rates.region",
+      "kind": "column",
+      "name": "region",
+      "data_type": "text",
+      "description": "region for tax rates",
+      "domain": "finance",
+      "parent_id": "finance.tax_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.tax_rates.tax_code",
+      "kind": "column",
+      "name": "tax_code",
+      "data_type": "text",
+      "description": "tax code for tax rates",
+      "domain": "finance",
+      "parent_id": "finance.tax_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.tax_rates.percentage",
+      "kind": "column",
+      "name": "percentage",
+      "data_type": "text",
+      "description": "percentage for tax rates",
+      "domain": "finance",
+      "parent_id": "finance.tax_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.tax_rates.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for tax rates",
+      "domain": "finance",
+      "parent_id": "finance.tax_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.tax_rates.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for tax rates",
+      "domain": "finance",
+      "parent_id": "finance.tax_rates",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.budgets",
+      "kind": "table",
+      "name": "budgets",
+      "data_type": "table",
+      "description": "Department spending budgets planned allocation",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.budgets.department_id",
+      "kind": "column",
+      "name": "department_id",
+      "data_type": "text",
+      "description": "department id for budgets",
+      "domain": "finance",
+      "parent_id": "finance.budgets",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.budgets.fiscal_year",
+      "kind": "column",
+      "name": "fiscal_year",
+      "data_type": "text",
+      "description": "fiscal year for budgets",
+      "domain": "finance",
+      "parent_id": "finance.budgets",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.budgets.planned_amount",
+      "kind": "column",
+      "name": "planned_amount",
+      "data_type": "numeric",
+      "description": "planned amount for budgets",
+      "domain": "finance",
+      "parent_id": "finance.budgets",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.budgets.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for budgets",
+      "domain": "finance",
+      "parent_id": "finance.budgets",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.budgets.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for budgets",
+      "domain": "finance",
+      "parent_id": "finance.budgets",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.expenses",
+      "kind": "table",
+      "name": "expenses",
+      "data_type": "table",
+      "description": "Employee expense reimbursement business spending",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.expenses.expense_id",
+      "kind": "column",
+      "name": "expense_id",
+      "data_type": "text",
+      "description": "expense id for expenses",
+      "domain": "finance",
+      "parent_id": "finance.expenses",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.expenses.employee_id",
+      "kind": "column",
+      "name": "employee_id",
+      "data_type": "text",
+      "description": "employee id for expenses",
+      "domain": "finance",
+      "parent_id": "finance.expenses",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.expenses.amount",
+      "kind": "column",
+      "name": "amount",
+      "data_type": "numeric",
+      "description": "amount for expenses",
+      "domain": "finance",
+      "parent_id": "finance.expenses",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.expenses.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for expenses",
+      "domain": "finance",
+      "parent_id": "finance.expenses",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.expenses.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for expenses",
+      "domain": "finance",
+      "parent_id": "finance.expenses",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payouts",
+      "kind": "table",
+      "name": "payouts",
+      "data_type": "table",
+      "description": "Merchant disbursement payout bank transfers",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.payouts.payout_id",
+      "kind": "column",
+      "name": "payout_id",
+      "data_type": "text",
+      "description": "payout id for payouts",
+      "domain": "finance",
+      "parent_id": "finance.payouts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payouts.supplier_id",
+      "kind": "column",
+      "name": "supplier_id",
+      "data_type": "text",
+      "description": "supplier id for payouts",
+      "domain": "finance",
+      "parent_id": "finance.payouts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payouts.amount",
+      "kind": "column",
+      "name": "amount",
+      "data_type": "numeric",
+      "description": "amount for payouts",
+      "domain": "finance",
+      "parent_id": "finance.payouts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payouts.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for payouts",
+      "domain": "finance",
+      "parent_id": "finance.payouts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.payouts.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for payouts",
+      "domain": "finance",
+      "parent_id": "finance.payouts",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.chargebacks",
+      "kind": "table",
+      "name": "chargebacks",
+      "data_type": "table",
+      "description": "Disputed card charges fraud chargeback cases",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.chargebacks.chargeback_id",
+      "kind": "column",
+      "name": "chargeback_id",
+      "data_type": "text",
+      "description": "chargeback id for chargebacks",
+      "domain": "finance",
+      "parent_id": "finance.chargebacks",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.chargebacks.payment_id",
+      "kind": "column",
+      "name": "payment_id",
+      "data_type": "text",
+      "description": "payment id for chargebacks",
+      "domain": "finance",
+      "parent_id": "finance.chargebacks",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.chargebacks.reason",
+      "kind": "column",
+      "name": "reason",
+      "data_type": "text",
+      "description": "reason for chargebacks",
+      "domain": "finance",
+      "parent_id": "finance.chargebacks",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.chargebacks.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for chargebacks",
+      "domain": "finance",
+      "parent_id": "finance.chargebacks",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.chargebacks.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for chargebacks",
+      "domain": "finance",
+      "parent_id": "finance.chargebacks",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily",
+      "kind": "table",
+      "name": "revenue_daily",
+      "data_type": "table",
+      "description": "Recognized net revenue daily financial reporting",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily.revenue_date",
+      "kind": "column",
+      "name": "revenue_date",
+      "data_type": "text",
+      "description": "revenue date for revenue daily",
+      "domain": "finance",
+      "parent_id": "finance.revenue_daily",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily.recognized_amount",
+      "kind": "column",
+      "name": "recognized_amount",
+      "data_type": "numeric",
+      "description": "recognized amount for revenue daily",
+      "domain": "finance",
+      "parent_id": "finance.revenue_daily",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily.currency",
+      "kind": "column",
+      "name": "currency",
+      "data_type": "text",
+      "description": "currency for revenue daily",
+      "domain": "finance",
+      "parent_id": "finance.revenue_daily",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for revenue daily",
+      "domain": "finance",
+      "parent_id": "finance.revenue_daily",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.revenue_daily.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for revenue daily",
+      "domain": "finance",
+      "parent_id": "finance.revenue_daily",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.audit_events",
+      "kind": "table",
+      "name": "audit_events",
+      "data_type": "table",
+      "description": "Financial audit trail changes compliance history",
+      "domain": "finance",
+      "parent_id": "finance",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "finance.audit_events.event_id",
+      "kind": "column",
+      "name": "event_id",
+      "data_type": "text",
+      "description": "event id for audit events",
+      "domain": "finance",
+      "parent_id": "finance.audit_events",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.audit_events.actor_id",
+      "kind": "column",
+      "name": "actor_id",
+      "data_type": "text",
+      "description": "actor id for audit events",
+      "domain": "finance",
+      "parent_id": "finance.audit_events",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.audit_events.action",
+      "kind": "column",
+      "name": "action",
+      "data_type": "text",
+      "description": "action for audit events",
+      "domain": "finance",
+      "parent_id": "finance.audit_events",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.audit_events.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for audit events",
+      "domain": "finance",
+      "parent_id": "finance.audit_events",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "finance.audit_events.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for audit events",
+      "domain": "finance",
+      "parent_id": "finance.audit_events",
+      "owners": [
+        "finance-analytics"
+      ],
+      "tags": [
+        "finance"
+      ]
+    },
+    {
+      "id": "product",
+      "kind": "dataset",
+      "name": "product",
+      "data_type": "schema",
+      "description": "Product warehouse domain",
+      "domain": "product",
+      "owners": [
+        "product-platform"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.users",
+      "kind": "table",
+      "name": "users",
+      "data_type": "table",
+      "description": "Application user identities signup activation profiles",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.users.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for users",
+      "domain": "product",
+      "parent_id": "product.users",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.users.customer_id",
+      "kind": "column",
+      "name": "customer_id",
+      "data_type": "text",
+      "description": "customer id for users",
+      "domain": "product",
+      "parent_id": "product.users",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.users.email",
+      "kind": "column",
+      "name": "email",
+      "data_type": "text",
+      "description": "email for users",
+      "domain": "product",
+      "parent_id": "product.users",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.users.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for users",
+      "domain": "product",
+      "parent_id": "product.users",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.users.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for users",
+      "domain": "product",
+      "parent_id": "product.users",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.sessions",
+      "kind": "table",
+      "name": "sessions",
+      "data_type": "table",
+      "description": "Application visits session duration device platform",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.sessions.session_id",
+      "kind": "column",
+      "name": "session_id",
+      "data_type": "text",
+      "description": "session id for sessions",
+      "domain": "product",
+      "parent_id": "product.sessions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.sessions.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for sessions",
+      "domain": "product",
+      "parent_id": "product.sessions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.sessions.duration_seconds",
+      "kind": "column",
+      "name": "duration_seconds",
+      "data_type": "numeric",
+      "description": "duration seconds for sessions",
+      "domain": "product",
+      "parent_id": "product.sessions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.sessions.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for sessions",
+      "domain": "product",
+      "parent_id": "product.sessions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.sessions.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for sessions",
+      "domain": "product",
+      "parent_id": "product.sessions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.events",
+      "kind": "table",
+      "name": "events",
+      "data_type": "table",
+      "description": "Application clickstream behavioral event tracking",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.events.event_id",
+      "kind": "column",
+      "name": "event_id",
+      "data_type": "text",
+      "description": "event id for events",
+      "domain": "product",
+      "parent_id": "product.events",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.events.session_id",
+      "kind": "column",
+      "name": "session_id",
+      "data_type": "text",
+      "description": "session id for events",
+      "domain": "product",
+      "parent_id": "product.events",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.events.event_name",
+      "kind": "column",
+      "name": "event_name",
+      "data_type": "text",
+      "description": "event name for events",
+      "domain": "product",
+      "parent_id": "product.events",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.events.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for events",
+      "domain": "product",
+      "parent_id": "product.events",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.events.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for events",
+      "domain": "product",
+      "parent_id": "product.events",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.page_views",
+      "kind": "table",
+      "name": "page_views",
+      "data_type": "table",
+      "description": "Web page traffic views URLs referrers",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.page_views.view_id",
+      "kind": "column",
+      "name": "view_id",
+      "data_type": "text",
+      "description": "view id for page views",
+      "domain": "product",
+      "parent_id": "product.page_views",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.page_views.session_id",
+      "kind": "column",
+      "name": "session_id",
+      "data_type": "text",
+      "description": "session id for page views",
+      "domain": "product",
+      "parent_id": "product.page_views",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.page_views.url",
+      "kind": "column",
+      "name": "url",
+      "data_type": "text",
+      "description": "url for page views",
+      "domain": "product",
+      "parent_id": "product.page_views",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.page_views.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for page views",
+      "domain": "product",
+      "parent_id": "product.page_views",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.page_views.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for page views",
+      "domain": "product",
+      "parent_id": "product.page_views",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.features",
+      "kind": "table",
+      "name": "features",
+      "data_type": "table",
+      "description": "Feature registry product capabilities release catalog",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.features.feature_id",
+      "kind": "column",
+      "name": "feature_id",
+      "data_type": "text",
+      "description": "feature id for features",
+      "domain": "product",
+      "parent_id": "product.features",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.features.feature_name",
+      "kind": "column",
+      "name": "feature_name",
+      "data_type": "text",
+      "description": "feature name for features",
+      "domain": "product",
+      "parent_id": "product.features",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.features.released_at",
+      "kind": "column",
+      "name": "released_at",
+      "data_type": "timestamptz",
+      "description": "released at for features",
+      "domain": "product",
+      "parent_id": "product.features",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.features.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for features",
+      "domain": "product",
+      "parent_id": "product.features",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.features.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for features",
+      "domain": "product",
+      "parent_id": "product.features",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feature_usage",
+      "kind": "table",
+      "name": "feature_usage",
+      "data_type": "table",
+      "description": "Feature adoption engagement usage counters",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.feature_usage.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for feature usage",
+      "domain": "product",
+      "parent_id": "product.feature_usage",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feature_usage.feature_id",
+      "kind": "column",
+      "name": "feature_id",
+      "data_type": "text",
+      "description": "feature id for feature usage",
+      "domain": "product",
+      "parent_id": "product.feature_usage",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feature_usage.use_count",
+      "kind": "column",
+      "name": "use_count",
+      "data_type": "numeric",
+      "description": "use count for feature usage",
+      "domain": "product",
+      "parent_id": "product.feature_usage",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feature_usage.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for feature usage",
+      "domain": "product",
+      "parent_id": "product.feature_usage",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feature_usage.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for feature usage",
+      "domain": "product",
+      "parent_id": "product.feature_usage",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiments",
+      "kind": "table",
+      "name": "experiments",
+      "data_type": "table",
+      "description": "AB testing experiment hypotheses treatment variants",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.experiments.experiment_id",
+      "kind": "column",
+      "name": "experiment_id",
+      "data_type": "text",
+      "description": "experiment id for experiments",
+      "domain": "product",
+      "parent_id": "product.experiments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiments.hypothesis",
+      "kind": "column",
+      "name": "hypothesis",
+      "data_type": "text",
+      "description": "hypothesis for experiments",
+      "domain": "product",
+      "parent_id": "product.experiments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiments.start_date",
+      "kind": "column",
+      "name": "start_date",
+      "data_type": "text",
+      "description": "start date for experiments",
+      "domain": "product",
+      "parent_id": "product.experiments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiments.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for experiments",
+      "domain": "product",
+      "parent_id": "product.experiments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiments.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for experiments",
+      "domain": "product",
+      "parent_id": "product.experiments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments",
+      "kind": "table",
+      "name": "experiment_assignments",
+      "data_type": "table",
+      "description": "Experiment cohort variant assignment participants",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments.experiment_id",
+      "kind": "column",
+      "name": "experiment_id",
+      "data_type": "text",
+      "description": "experiment id for experiment assignments",
+      "domain": "product",
+      "parent_id": "product.experiment_assignments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for experiment assignments",
+      "domain": "product",
+      "parent_id": "product.experiment_assignments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments.variant",
+      "kind": "column",
+      "name": "variant",
+      "data_type": "text",
+      "description": "variant for experiment assignments",
+      "domain": "product",
+      "parent_id": "product.experiment_assignments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for experiment assignments",
+      "domain": "product",
+      "parent_id": "product.experiment_assignments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.experiment_assignments.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for experiment assignments",
+      "domain": "product",
+      "parent_id": "product.experiment_assignments",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.conversions",
+      "kind": "table",
+      "name": "conversions",
+      "data_type": "table",
+      "description": "Funnel goal completions conversion attribution",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.conversions.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for conversions",
+      "domain": "product",
+      "parent_id": "product.conversions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.conversions.session_id",
+      "kind": "column",
+      "name": "session_id",
+      "data_type": "text",
+      "description": "session id for conversions",
+      "domain": "product",
+      "parent_id": "product.conversions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.conversions.goal_name",
+      "kind": "column",
+      "name": "goal_name",
+      "data_type": "text",
+      "description": "goal name for conversions",
+      "domain": "product",
+      "parent_id": "product.conversions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.conversions.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for conversions",
+      "domain": "product",
+      "parent_id": "product.conversions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.conversions.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for conversions",
+      "domain": "product",
+      "parent_id": "product.conversions",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.retention",
+      "kind": "table",
+      "name": "retention",
+      "data_type": "table",
+      "description": "Weekly user retention cohort return activity",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.retention.cohort_week",
+      "kind": "column",
+      "name": "cohort_week",
+      "data_type": "text",
+      "description": "cohort week for retention",
+      "domain": "product",
+      "parent_id": "product.retention",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.retention.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for retention",
+      "domain": "product",
+      "parent_id": "product.retention",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.retention.retained",
+      "kind": "column",
+      "name": "retained",
+      "data_type": "text",
+      "description": "retained for retention",
+      "domain": "product",
+      "parent_id": "product.retention",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.retention.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for retention",
+      "domain": "product",
+      "parent_id": "product.retention",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.retention.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for retention",
+      "domain": "product",
+      "parent_id": "product.retention",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.notifications",
+      "kind": "table",
+      "name": "notifications",
+      "data_type": "table",
+      "description": "Push and email notification delivery messages",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.notifications.notification_id",
+      "kind": "column",
+      "name": "notification_id",
+      "data_type": "text",
+      "description": "notification id for notifications",
+      "domain": "product",
+      "parent_id": "product.notifications",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.notifications.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for notifications",
+      "domain": "product",
+      "parent_id": "product.notifications",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.notifications.channel",
+      "kind": "column",
+      "name": "channel",
+      "data_type": "text",
+      "description": "channel for notifications",
+      "domain": "product",
+      "parent_id": "product.notifications",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.notifications.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for notifications",
+      "domain": "product",
+      "parent_id": "product.notifications",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.notifications.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for notifications",
+      "domain": "product",
+      "parent_id": "product.notifications",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.support_tickets",
+      "kind": "table",
+      "name": "support_tickets",
+      "data_type": "table",
+      "description": "Customer support issues resolution helpdesk",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.support_tickets.ticket_id",
+      "kind": "column",
+      "name": "ticket_id",
+      "data_type": "text",
+      "description": "ticket id for support tickets",
+      "domain": "product",
+      "parent_id": "product.support_tickets",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.support_tickets.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for support tickets",
+      "domain": "product",
+      "parent_id": "product.support_tickets",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.support_tickets.resolution_time",
+      "kind": "column",
+      "name": "resolution_time",
+      "data_type": "text",
+      "description": "resolution time for support tickets",
+      "domain": "product",
+      "parent_id": "product.support_tickets",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.support_tickets.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for support tickets",
+      "domain": "product",
+      "parent_id": "product.support_tickets",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.support_tickets.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for support tickets",
+      "domain": "product",
+      "parent_id": "product.support_tickets",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feedback",
+      "kind": "table",
+      "name": "feedback",
+      "data_type": "table",
+      "description": "In app survey satisfaction NPS responses",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.feedback.response_id",
+      "kind": "column",
+      "name": "response_id",
+      "data_type": "text",
+      "description": "response id for feedback",
+      "domain": "product",
+      "parent_id": "product.feedback",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feedback.user_id",
+      "kind": "column",
+      "name": "user_id",
+      "data_type": "text",
+      "description": "user id for feedback",
+      "domain": "product",
+      "parent_id": "product.feedback",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feedback.nps_score",
+      "kind": "column",
+      "name": "nps_score",
+      "data_type": "numeric",
+      "description": "nps score for feedback",
+      "domain": "product",
+      "parent_id": "product.feedback",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feedback.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for feedback",
+      "domain": "product",
+      "parent_id": "product.feedback",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.feedback.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for feedback",
+      "domain": "product",
+      "parent_id": "product.feedback",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.errors",
+      "kind": "table",
+      "name": "errors",
+      "data_type": "table",
+      "description": "Application crashes error telemetry stack traces",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.errors.error_id",
+      "kind": "column",
+      "name": "error_id",
+      "data_type": "text",
+      "description": "error id for errors",
+      "domain": "product",
+      "parent_id": "product.errors",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.errors.session_id",
+      "kind": "column",
+      "name": "session_id",
+      "data_type": "text",
+      "description": "session id for errors",
+      "domain": "product",
+      "parent_id": "product.errors",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.errors.error_message",
+      "kind": "column",
+      "name": "error_message",
+      "data_type": "text",
+      "description": "error message for errors",
+      "domain": "product",
+      "parent_id": "product.errors",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.errors.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for errors",
+      "domain": "product",
+      "parent_id": "product.errors",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.errors.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for errors",
+      "domain": "product",
+      "parent_id": "product.errors",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.releases",
+      "kind": "table",
+      "name": "releases",
+      "data_type": "table",
+      "description": "Application deployment version release history",
+      "domain": "product",
+      "parent_id": "product",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "product.releases.release_id",
+      "kind": "column",
+      "name": "release_id",
+      "data_type": "text",
+      "description": "release id for releases",
+      "domain": "product",
+      "parent_id": "product.releases",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.releases.version",
+      "kind": "column",
+      "name": "version",
+      "data_type": "text",
+      "description": "version for releases",
+      "domain": "product",
+      "parent_id": "product.releases",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.releases.deployed_at",
+      "kind": "column",
+      "name": "deployed_at",
+      "data_type": "timestamptz",
+      "description": "deployed at for releases",
+      "domain": "product",
+      "parent_id": "product.releases",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.releases.created_at",
+      "kind": "column",
+      "name": "created_at",
+      "data_type": "timestamptz",
+      "description": "created at for releases",
+      "domain": "product",
+      "parent_id": "product.releases",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    },
+    {
+      "id": "product.releases.updated_at",
+      "kind": "column",
+      "name": "updated_at",
+      "data_type": "timestamptz",
+      "description": "updated at for releases",
+      "domain": "product",
+      "parent_id": "product.releases",
+      "owners": [
+        "product-analytics"
+      ],
+      "tags": [
+        "product"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "commerce.orders",
+      "target_id": "commerce.customers",
+      "kind": "join",
+      "description": "commerce.orders.customer_id = commerce.customers.customer_id",
+      "source_column": "customer_id",
+      "target_column": "customer_id"
+    },
+    {
+      "source_id": "commerce.order_items",
+      "target_id": "commerce.orders",
+      "kind": "join",
+      "description": "commerce.order_items.order_id = commerce.orders.order_id",
+      "source_column": "order_id",
+      "target_column": "order_id"
+    },
+    {
+      "source_id": "commerce.order_items",
+      "target_id": "commerce.products",
+      "kind": "join",
+      "description": "commerce.order_items.product_id = commerce.products.product_id",
+      "source_column": "product_id",
+      "target_column": "product_id"
+    },
+    {
+      "source_id": "commerce.products",
+      "target_id": "commerce.categories",
+      "kind": "join",
+      "description": "commerce.products.category_id = commerce.categories.category_id",
+      "source_column": "category_id",
+      "target_column": "category_id"
+    },
+    {
+      "source_id": "commerce.shipments",
+      "target_id": "commerce.orders",
+      "kind": "join",
+      "description": "commerce.shipments.order_id = commerce.orders.order_id",
+      "source_column": "order_id",
+      "target_column": "order_id"
+    },
+    {
+      "source_id": "commerce.returns",
+      "target_id": "commerce.orders",
+      "kind": "join",
+      "description": "commerce.returns.order_id = commerce.orders.order_id",
+      "source_column": "order_id",
+      "target_column": "order_id"
+    },
+    {
+      "source_id": "commerce.inventory",
+      "target_id": "commerce.products",
+      "kind": "join",
+      "description": "commerce.inventory.product_id = commerce.products.product_id",
+      "source_column": "product_id",
+      "target_column": "product_id"
+    },
+    {
+      "source_id": "commerce.reviews",
+      "target_id": "commerce.products",
+      "kind": "join",
+      "description": "commerce.reviews.product_id = commerce.products.product_id",
+      "source_column": "product_id",
+      "target_column": "product_id"
+    },
+    {
+      "source_id": "commerce.loyalty",
+      "target_id": "commerce.customers",
+      "kind": "join",
+      "description": "commerce.loyalty.customer_id = commerce.customers.customer_id",
+      "source_column": "customer_id",
+      "target_column": "customer_id"
+    },
+    {
+      "source_id": "finance.payments",
+      "target_id": "commerce.orders",
+      "kind": "join",
+      "description": "finance.payments.order_id = commerce.orders.order_id",
+      "source_column": "order_id",
+      "target_column": "order_id"
+    },
+    {
+      "source_id": "finance.refunds",
+      "target_id": "finance.payments",
+      "kind": "join",
+      "description": "finance.refunds.payment_id = finance.payments.payment_id",
+      "source_column": "payment_id",
+      "target_column": "payment_id"
+    },
+    {
+      "source_id": "finance.chargebacks",
+      "target_id": "finance.payments",
+      "kind": "join",
+      "description": "finance.chargebacks.payment_id = finance.payments.payment_id",
+      "source_column": "payment_id",
+      "target_column": "payment_id"
+    },
+    {
+      "source_id": "finance.invoices",
+      "target_id": "commerce.customers",
+      "kind": "join",
+      "description": "finance.invoices.customer_id = commerce.customers.customer_id",
+      "source_column": "customer_id",
+      "target_column": "customer_id"
+    },
+    {
+      "source_id": "finance.subscriptions",
+      "target_id": "commerce.customers",
+      "kind": "join",
+      "description": "finance.subscriptions.customer_id = commerce.customers.customer_id",
+      "source_column": "customer_id",
+      "target_column": "customer_id"
+    },
+    {
+      "source_id": "finance.invoice_lines",
+      "target_id": "finance.invoices",
+      "kind": "join",
+      "description": "finance.invoice_lines.invoice_id = finance.invoices.invoice_id",
+      "source_column": "invoice_id",
+      "target_column": "invoice_id"
+    },
+    {
+      "source_id": "finance.ledger_entries",
+      "target_id": "finance.accounts",
+      "kind": "join",
+      "description": "finance.ledger_entries.account_id = finance.accounts.account_id",
+      "source_column": "account_id",
+      "target_column": "account_id"
+    },
+    {
+      "source_id": "product.users",
+      "target_id": "commerce.customers",
+      "kind": "join",
+      "description": "product.users.customer_id = commerce.customers.customer_id",
+      "source_column": "customer_id",
+      "target_column": "customer_id"
+    },
+    {
+      "source_id": "product.sessions",
+      "target_id": "product.users",
+      "kind": "join",
+      "description": "product.sessions.user_id = product.users.user_id",
+      "source_column": "user_id",
+      "target_column": "user_id"
+    },
+    {
+      "source_id": "product.events",
+      "target_id": "product.sessions",
+      "kind": "join",
+      "description": "product.events.session_id = product.sessions.session_id",
+      "source_column": "session_id",
+      "target_column": "session_id"
+    },
+    {
+      "source_id": "product.page_views",
+      "target_id": "product.sessions",
+      "kind": "join",
+      "description": "product.page_views.session_id = product.sessions.session_id",
+      "source_column": "session_id",
+      "target_column": "session_id"
+    },
+    {
+      "source_id": "product.feature_usage",
+      "target_id": "product.features",
+      "kind": "join",
+      "description": "product.feature_usage.feature_id = product.features.feature_id",
+      "source_column": "feature_id",
+      "target_column": "feature_id"
+    },
+    {
+      "source_id": "product.feature_usage",
+      "target_id": "product.users",
+      "kind": "join",
+      "description": "product.feature_usage.user_id = product.users.user_id",
+      "source_column": "user_id",
+      "target_column": "user_id"
+    },
+    {
+      "source_id": "product.experiment_assignments",
+      "target_id": "product.experiments",
+      "kind": "join",
+      "description": "product.experiment_assignments.experiment_id = product.experiments.experiment_id",
+      "source_column": "experiment_id",
+      "target_column": "experiment_id"
+    },
+    {
+      "source_id": "product.experiment_assignments",
+      "target_id": "product.users",
+      "kind": "join",
+      "description": "product.experiment_assignments.user_id = product.users.user_id",
+      "source_column": "user_id",
+      "target_column": "user_id"
+    },
+    {
+      "source_id": "product.support_tickets",
+      "target_id": "product.users",
+      "kind": "join",
+      "description": "product.support_tickets.user_id = product.users.user_id",
+      "source_column": "user_id",
+      "target_column": "user_id"
+    },
+    {
+      "source_id": "commerce.orders",
+      "target_id": "commerce.daily_sales",
+      "kind": "lineage",
+      "description": "commerce.orders \u2192 commerce.daily_sales",
+      "source_column": null,
+      "target_column": null
+    },
+    {
+      "source_id": "commerce.order_items",
+      "target_id": "commerce.daily_sales",
+      "kind": "lineage",
+      "description": "commerce.order_items \u2192 commerce.daily_sales",
+      "source_column": null,
+      "target_column": null
+    },
+    {
+      "source_id": "finance.payments",
+      "target_id": "finance.revenue_daily",
+      "kind": "lineage",
+      "description": "finance.payments \u2192 finance.revenue_daily",
+      "source_column": null,
+      "target_column": null
+    },
+    {
+      "source_id": "finance.refunds",
+      "target_id": "finance.revenue_daily",
+      "kind": "lineage",
+      "description": "finance.refunds \u2192 finance.revenue_daily",
+      "source_column": null,
+      "target_column": null
+    },
+    {
+      "source_id": "product.events",
+      "target_id": "product.retention",
+      "kind": "lineage",
+      "description": "product.events \u2192 product.retention",
+      "source_column": null,
+      "target_column": null
+    },
+    {
+      "source_id": "commerce.customers",
+      "target_id": "product.users",
+      "kind": "same_concept",
+      "description": "commerce.customers \u2192 product.users",
+      "source_column": null,
+      "target_column": null
+    }
+  ],
+  "definitions": [
+    {
+      "term": "GMV",
+      "definition": "Gross merchandise value before refunds and fees",
+      "asset_ids": [
+        "commerce.orders",
+        "commerce.daily_sales"
+      ]
+    },
+    {
+      "term": "MRR",
+      "definition": "Monthly recurring revenue from active subscriptions",
+      "asset_ids": [
+        "finance.subscriptions"
+      ]
+    },
+    {
+      "term": "Net revenue",
+      "definition": "Recognized revenue after refunds and adjustments",
+      "asset_ids": [
+        "finance.revenue_daily",
+        "finance.refunds"
+      ]
+    },
+    {
+      "term": "Active user",
+      "definition": "A user with a recorded application session",
+      "asset_ids": [
+        "product.users",
+        "product.sessions"
+      ]
+    },
+    {
+      "term": "Retention",
+      "definition": "Share of a signup cohort returning in a later week",
+      "asset_ids": [
+        "product.retention"
+      ]
+    },
+    {
+      "term": "Conversion",
+      "definition": "Completion of a tracked funnel goal",
+      "asset_ids": [
+        "product.conversions"
+      ]
+    },
+    {
+      "term": "NPS",
+      "definition": "Net promoter score from user satisfaction surveys",
+      "asset_ids": [
+        "product.feedback"
+      ]
+    },
+    {
+      "term": "Stock",
+      "definition": "Units currently available in a warehouse",
+      "asset_ids": [
+        "commerce.inventory"
+      ]
+    }
+  ]
+}

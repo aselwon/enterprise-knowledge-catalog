@@ -1,0 +1,255 @@
+[
+  {
+    "query": "customer profiles",
+    "expected": [
+      "commerce.customers"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "gross merchandise value",
+    "expected": [
+      "commerce.orders",
+      "commerce.daily_sales"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "purchased products quantity",
+    "expected": [
+      "commerce.order_items"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "product catalog",
+    "expected": [
+      "commerce.products"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "category hierarchy",
+    "expected": [
+      "commerce.categories"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "cart abandonment",
+    "expected": [
+      "commerce.carts"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "delivery tracking",
+    "expected": [
+      "commerce.shipments"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "returned merchandise",
+    "expected": [
+      "commerce.returns"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "stock availability",
+    "expected": [
+      "commerce.inventory"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "supplier contracts",
+    "expected": [
+      "commerce.suppliers"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "coupon codes",
+    "expected": [
+      "commerce.promotions"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "star ratings",
+    "expected": [
+      "commerce.reviews"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "reward points",
+    "expected": [
+      "commerce.loyalty"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "payment settlement",
+    "expected": [
+      "finance.payments"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "payment reversals",
+    "expected": [
+      "finance.refunds"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "billing due dates",
+    "expected": [
+      "finance.invoices"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "monthly recurring revenue",
+    "expected": [
+      "finance.subscriptions"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "ledger postings",
+    "expected": [
+      "finance.ledger_entries"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "foreign exchange",
+    "expected": [
+      "finance.exchange_rates"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "department budgets",
+    "expected": [
+      "finance.budgets"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "expense reimbursement",
+    "expected": [
+      "finance.expenses"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "disputed charges",
+    "expected": [
+      "finance.chargebacks"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "recognized revenue",
+    "expected": [
+      "finance.revenue_daily"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "session duration",
+    "expected": [
+      "product.sessions"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "clickstream",
+    "expected": [
+      "product.events"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "feature adoption",
+    "expected": [
+      "product.feature_usage"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "experiment hypotheses",
+    "expected": [
+      "product.experiments"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "cohort retention",
+    "expected": [
+      "product.retention"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "helpdesk resolution",
+    "expected": [
+      "product.support_tickets"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "satisfaction NPS",
+    "expected": [
+      "product.feedback"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "crashes telemetry",
+    "expected": [
+      "product.errors"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "deployment version",
+    "expected": [
+      "product.releases"
+    ],
+    "kind": "table"
+  },
+  {
+    "query": "total amount",
+    "expected": [
+      "commerce.orders.total_amount"
+    ],
+    "kind": "column"
+  },
+  {
+    "query": "tracking number",
+    "expected": [
+      "commerce.shipments.tracking_number"
+    ],
+    "kind": "column"
+  },
+  {
+    "query": "duration seconds",
+    "expected": [
+      "product.sessions.duration_seconds"
+    ],
+    "kind": "column"
+  },
+  {
+    "query": "nps score",
+    "expected": [
+      "product.feedback.nps_score"
+    ],
+    "kind": "column"
+  }
+]

@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: catalog
+      POSTGRES_PASSWORD: catalog
+      POSTGRES_DB: catalog
+    ports:
+      - "127.0.0.1:${CATALOG_DB_PORT:-55440}:5432"
+    volumes:
+      - catalog_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U catalog -d catalog"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  seed:
+    build: .
+    environment: &catalog_env
+      DATABASE_URL: postgresql://catalog:catalog@db:5432/catalog
+      MOCK_MODE: "true"
+    command: ["catalog", "bootstrap"]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    build: .
+    environment: *catalog_env
+    ports:
+      - "127.0.0.1:${CATALOG_API_PORT:-18091}:8000"
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  ui:
+    build: ./ui
+    ports:
+      - "127.0.0.1:${CATALOG_UI_PORT:-18092}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  catalog_data:
